@@ -25,7 +25,13 @@
 
         async function call() {
             try {
-                let res = await axios.get('remove.php')
+                let data = {
+                    id : 223
+                }
+
+                let dt = new FormData()
+                dt.append('id' , 2654)
+                let res = await axios.post('remove.php' , data)
                 console.log(res.data)
             } catch (error) {
                 console.log(error)
